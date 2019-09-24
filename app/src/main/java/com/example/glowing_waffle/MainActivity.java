@@ -12,6 +12,9 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import libs.mjn.prettydialog.PrettyDialog;
+import libs.mjn.prettydialog.PrettyDialogCallback;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -21,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        FloatingActionButton addItem = findViewById(R.id.add);
+        addItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
@@ -46,7 +49,28 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.aboutItem) {
+            final PrettyDialog pDialog = new PrettyDialog(this);
+            pDialog
+                    .setIcon(R.drawable.info_icon)
+                    .setTitle("About This App")
+                    .setMessage("This is our To Do List App" + "\n"
+                            + "Codenamed Glowing Waffle" + "\n"
+                            + "Hope you like it.")
+                    .addButton(
+                            "OK",     // button text
+                            R.color.pdlg_color_black,  // button text color
+                            R.color.pdlg_color_gray,  // button background color
+                            new PrettyDialogCallback() {  // button OnClick listener
+                                @Override
+                                public void onClick() {
+                                    pDialog.dismiss();
+                                }
+                            }
+                    )
+                    .show();
+
+        }else if(id == R.id.addItem) {
             return true;
         }
 

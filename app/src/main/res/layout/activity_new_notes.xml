@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".MainActivity"
-    tools:showIn="@layout/activity_main">
+    tools:context=".NewNotes">
 
-    <ListView
-        android:id="@+id/todoList"
+    <EditText
+        android:id="@+id/editText"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:inputType="none|text" />
 </LinearLayout>
