@@ -1,2 +1,2 @@
 # glowing-waffle
-put random things in here.
+https://rogerdudler.github.io/git-guide/
