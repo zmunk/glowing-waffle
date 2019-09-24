@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                     .setIcon(R.drawable.info_icon)
                     .setTitle("About This App")
                     .setMessage("This is our To Do List App" + "\n"
-                            + "Codenamed Glowing Waffle" + "\n"
+                            + "Codenamed : Glowing Waffle" + "\n"
                             + "Hope you like it.")
                     .addButton(
                             "OK",     // button text
