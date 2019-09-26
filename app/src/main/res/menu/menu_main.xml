@@ -8,10 +8,4 @@
         android:title="About"
         app:showAsAction="never" />
 
-    <item
-        android:id="@+id/addItem"
-        android:orderInCategory="100"
-        android:title="Add Item To List"
-        android:icon="@drawable/add_icon"
-        app:showAsAction="always" />
 </menu>
